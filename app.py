@@ -1,8 +1,8 @@
 from flask import Flask, request, Response
 from goose3 import Goose
-
+from flask_cors import CORS  # Import CORS
 app = Flask(__name__)
-
+CORS(app)
 def fetch_article_content(url):
     """Fetches and cleans the article content from a given URL.
 
